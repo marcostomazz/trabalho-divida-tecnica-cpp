@@ -51,6 +51,11 @@ void add(string n, double p, int q) {
 }
 
 double vender(string nome, int quantidade) {
+    if (quantidade <= 0) {
+        cout << "Erro: a quantidade deve ser maior que zero." << endl;
+        return 0.0;
+    }
+
     for (int i = 0; i < produtos.size(); i++) {
         if (produtos[i].nome == nome) {
             if (produtos[i].qtd >= quantidade) {
